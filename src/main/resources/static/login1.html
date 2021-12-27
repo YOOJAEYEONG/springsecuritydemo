@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <title>Please Log In !</title>
+</head>
+<body>
+<h1>Please Log In !</h1>
+<!--<div if="${param.error}">-->
+<!--  Invalid username and password.</div>-->
+<!--<div if="${param.logout}">-->
+<!--  You have been logged out.</div>-->
+<form action="/login" method="post">
+
+<!--  <input type="hidden" name="${_csrf.paremeterName }" value="${_csrf.token }"/>-->
+  <div>
+    <input type="text" name="username" placeholder="Username" value="user"/>
+  </div>
+  <div>
+    <input type="password" name="password" placeholder="Password" value="1234"/>
+  </div>
+  <input type="submit" value="Log in" />
+</form>
+</body>
+</html>
