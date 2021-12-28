@@ -17,8 +17,9 @@ public class SpringsecuritydemoApplication {
     SpringApplication.run(SpringsecuritydemoApplication.class, args);
 
 
-//    SecurityContext context = SecurityContextHolder.createEmptyContext(); // (1)
-//    Authentication authentication =
+    SecurityContext context = SecurityContextHolder.createEmptyContext(); // (1)
+
+    Authentication authentication = context.getAuthentication();
 //      new TestingAuthenticationToken("user", "1234", "ROLE_USER11"); // (2)
 //    context.setAuthentication(authentication);
 //
@@ -29,7 +30,6 @@ public class SpringsecuritydemoApplication {
 //    String username = authentication.getName();
 //    Object principal = authentication.getPrincipal();
 //    Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
-//
 //    System.out.println("SpringsecuritydemoApplicationTests.getAuthUser");
 //    System.out.printf("principal %s\n", principal.toString());
 //    System.out.println("username : "+ username);
